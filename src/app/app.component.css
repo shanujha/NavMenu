@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #e0eafc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+
+.wrapper > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.wrapper > div > div {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  height: auto;
+  text-align: right;
+}
+
+.wrapper > div > div > div > a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: inline-block;
+  font-weight: bold;
+  color: black;
+}
+
+.wrapper > div > div > div > a:hover {
+  color: white;
+  border-radius: 14px;
+  background: #485563; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #29323c,
+    #485563
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #29323c,
+    #485563
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#active:checked ~ .wrapper {
+  clip-path: circle(75%);
+}
+.menu-btn {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  background: #e0eafc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn {
+  background: #485563; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #29323c,
+    #485563
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #29323c, #485563);
+  color: #ffffff;
+}
+#active:checked ~ .menu-btn i:before {
+  content: "\f00d";
+}
+input[type="checkbox"] {
+  display: none;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  color: #202020;
+}
+.content .title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navmenulist {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navmenulist > div > a {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: inline-block;
+  font-weight: bold;
+  color: black;
+}
+
+.navmenulist > div > a:hover {
+  color: white;
+  border-radius: 14px;
+  background: #485563; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #29323c,
+    #485563
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #29323c,
+    #485563
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navmenulistcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 100px;
+  margin-top: 16px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .navmenulist{
+    display: none;
+  }
+}
